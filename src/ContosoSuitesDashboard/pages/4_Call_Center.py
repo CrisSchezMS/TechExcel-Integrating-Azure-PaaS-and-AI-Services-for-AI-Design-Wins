@@ -60,6 +60,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     # all_results = ['This is a test.', 'Fill in with real transcription.']
     # Subscribe to the events fired by the conversation transcriber
     transcriber.transcribed.connect(handle_final_result)
+    print('hello')
     transcriber.session_started.connect(lambda evt: print(f'SESSION STARTED: {evt}'))
     transcriber.session_stopped.connect(lambda evt: print(f'SESSION STOPPED {evt}'))
     transcriber.canceled.connect(lambda evt: print(f'CANCELED {evt}'))
