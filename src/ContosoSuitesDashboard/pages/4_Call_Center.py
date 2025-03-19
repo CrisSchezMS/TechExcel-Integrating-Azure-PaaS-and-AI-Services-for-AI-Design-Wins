@@ -80,7 +80,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     transcriber.stop_transcribing_async()
 
 
-    return all_results
+    return 
 
 def make_azure_openai_chat_request(system, call_contents):
     """Create and return a new chat completion request. Key assumptions:
@@ -207,7 +207,7 @@ def normalize_text(s):
     s = s.replace("\n", "")
     s = s.strip()
 
-    return s
+    return speech_key
 
 def generate_embeddings_for_call_contents(call_contents):
     """Generate embeddings for call contents. Key assumptions:
