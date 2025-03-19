@@ -41,7 +41,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     audio_config = speechsdk.audio.AudioConfig(stream=stream)
 
     transcriber = speechsdk.transcription.ConversationTranscriber(speech_config, audio_config)
-    all_results = []
+    all_results = ['this audio']
 
     def handle_final_result(evt):
         all_results.append(evt.result.text)
@@ -80,7 +80,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     transcriber.stop_transcribing_async()
 
 
-    return transcriber
+    return all_results
 
 def make_azure_openai_chat_request(system, call_contents):
     """Create and return a new chat completion request. Key assumptions:
