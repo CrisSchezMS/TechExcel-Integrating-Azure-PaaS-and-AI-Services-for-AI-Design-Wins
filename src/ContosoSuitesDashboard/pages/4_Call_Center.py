@@ -80,7 +80,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     transcriber.stop_transcribing_async()
 
 
-    return 
+    return transcriber
 
 def make_azure_openai_chat_request(system, call_contents):
     """Create and return a new chat completion request. Key assumptions:
