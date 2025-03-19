@@ -41,7 +41,7 @@ def create_transcription_request(audio_file, speech_recognition_language="en-US"
     audio_config = speechsdk.audio.AudioConfig(stream=stream)
 
     transcriber = speechsdk.transcription.ConversationTranscriber(speech_config, audio_config)
-    all_results = ['this audio']
+    all_results = []
 
     def handle_final_result(evt):
         all_results.append(evt.result.text)
